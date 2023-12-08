@@ -39,6 +39,7 @@ gunicorn weather_app.wsgi.application
 server {
     listen 80;
     server_name yourdomain.com www.yourdomain.com;
+    
     location = /favicon.ico { access_log off; log_not_found off; }
     location / {
         proxy_pass http://127.0.0.1:8000;
