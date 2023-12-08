@@ -1,0 +1,77 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Updates</title>
+    <link rel="icon" href="{% static "images/116.png" %}">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+    <div id="heading">
+        <h1>Weather Me</h1>
+        <img src="{% static 'images/116.png' %}" alt="">
+    </div>
+
+    <div id="Section1">
+        <form action="" method="get">
+            <div class="mb-3 form-div">
+                <input type="text" name= "city" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your City" required>
+                <button name= "search" class = 'btn'>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </form>
+
+        {% comment %} city card {% endcomment %}
+
+        <div id='city-card'>
+            <div id="left">
+                <div id="top">
+                    <p id="p1">{{ temperature }}°C</p>
+                    <p id="p2">Now</p>
+                </div>
+                <p id='p3'>{{ city }}, {{ country }}</p>
+            </div>
+            <div id="right">
+                <img src="{{ icon_url }}" alt="weather image">
+            </div>
+        </div>
+
+        {% comment %} statistics{% endcomment %}
+        <div id ="statistcis">
+            <div id="left">
+                <img src="{{ icon_url }}" alt="Weather image">
+                <p>{{ weather }}</p>
+                <p>{{ weather_description }}</p>
+            </div>
+            <div id="right">
+            {% comment %} Temperature {% endcomment %}
+                <div class="temp-icons">
+                    <i class="fa-solid fa-temperature-half" id="fa-s"></i>
+                    <div>
+                        <p class="temp">{{ temperature }}°C</p>
+                        <p class="temp-txt">Temperature</p>
+                    </div>
+                </div>
+            {% comment %} Wind Speed{% endcomment %}
+                <div class="temp-icons" id="wind">
+                    <i class="fa-solid fa-wind" id="fa-s"></i>
+                    <div>
+                        <p class="temp">{{ wind_speed }} m/s</p>
+                        <p class="temp">Wind</p>
+                    </div>
+                </div>
+            {% comment %} Humidity {% endcomment %}
+                <div class="temp-icons" id="humi">
+                    <i class="fa-solid fa-droplet" id="fa-s"></i>
+                    <div>
+                        <p class="temp">{{ humidity }}%</p>
+                        <p class="temp">Humidity</p>
+                    </div>
+            </div>
+        </div>
+    </div> 
+</body>
+<script src="https://kit.fontawesome.com/3f52c11cab.js" crossorigin="anonymous"></script>
+</html>
