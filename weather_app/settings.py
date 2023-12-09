@@ -118,6 +118,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Additional locations of static files (if any)
+STATICFILES_DIRS = [
+
+    ('Weather_application', '/weather_app/Weather_application/static/'),
+]
+
+STATIC_ROOT = '/Weather_application/static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
