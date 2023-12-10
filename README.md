@@ -6,7 +6,9 @@ A responsive weather app that provides real-time weather information for cities 
 **Features**
 
 **Responsive Design:** The app is designed to be accessible and usable across various devices and screen sizes.
+
 **City Coverage:** Provides weather reports for cities all around the world.
+
 **Nginx and Gunicorn:** Uses Nginx as the web server and Gunicorn as the application server to handle HTTP requests efficiently.
 
 
