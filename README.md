@@ -19,7 +19,8 @@ Django
 
 **Installation**
 Clone the repository:
-git clone https://github.com/your-username/weather-app.git
+
+git clone https://github.com/Sourav356/Weather_App.github.io.git
 
 **Install dependencies:**
 
